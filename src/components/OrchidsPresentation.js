@@ -4,7 +4,7 @@ export default function OrchidsPresentation({ orchids }) {
   return (
     <div className="row">
       {orchids.map((orchid) => (
-        <div className="col-md-3 mb-4" key={orchid.id}>
+        <div key={orchid.id} className="col-md-3 mb-4">
           <div className="card h-100 shadow-sm">
             <img
               src={orchid.image}
@@ -17,17 +17,12 @@ export default function OrchidsPresentation({ orchids }) {
               <p className="card-text">
                 <strong>Origin:</strong> {orchid.origin} <br />
                 <strong>Color:</strong> {orchid.color} <br />
-                <strong>Category:</strong> {orchid.category}
+                <strong>Category:</strong> {orchid.category} <br />
+                <strong>Rating:</strong> ⭐ {orchid.rating}
               </p>
-              <p>
-                ⭐ {orchid.rating} |{" "}
-                {orchid.isSpecial ? (
-                  <span className="badge bg-success">Special</span>
-                ) : (
-                  <span className="badge bg-secondary">Normal</span>
-                )}
-              </p>
-              <button className="btn btn-primary btn-sm">Details</button>
+              {orchid.isSpecial && (
+                <span className="badge bg-success">Special</span>
+              )}
             </div>
           </div>
         </div>
