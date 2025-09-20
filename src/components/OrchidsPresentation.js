@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function OrchidsPresentation({ orchids }) {
+export default function OrchidsPresentation({ orchids, onShowDetail }) {
   return (
     <div className="row">
       {orchids.map((orchid) => (
@@ -23,6 +23,14 @@ export default function OrchidsPresentation({ orchids }) {
               {orchid.isSpecial && (
                 <span className="badge bg-success">Special</span>
               )}
+              <div className="mt-3">
+                <button 
+                  className="btn btn-primary btn-sm"
+                  onClick={() => onShowDetail(orchid)}
+                >
+                  Detail
+                </button>
+              </div>
             </div>
           </div>
         </div>

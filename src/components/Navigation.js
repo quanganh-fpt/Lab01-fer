@@ -1,28 +1,44 @@
-export default function Navigation() {
+import React from "react";
+
+export default function Navigation({ isDarkTheme, onToggleTheme }) {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          Navbar
+      <nav
+        className={`navbar navbar-expand-lg ${
+          isDarkTheme ? "navbar-dark bg-dark" : "navbar-light bg-light"
+        }`}
+      >
+        <a className="navbar-brand" href="#">
+          Orchid Collection
         </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                Home <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#products">
+            <li className="nav-item">
+              <a className="nav-link" href="#products">
                 Products
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">
+            <li className="nav-item">
+              <a className="nav-link" href="#about">
                 About
               </a>
             </li>
           </ul>
+          <div className="navbar-nav">
+            <button
+              className={`btn ${
+                isDarkTheme ? "btn-outline-light" : "btn-outline-dark"
+              } btn-sm`}
+              onClick={onToggleTheme}
+            >
+              {isDarkTheme ? "☀️ Light" : "🌙 Dark"}
+            </button>
+          </div>
         </div>
       </nav>
     </div>
