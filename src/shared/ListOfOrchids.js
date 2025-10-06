@@ -5,7 +5,8 @@ export const ListOfOrchids = [
     name: 'Brassavola',
     rating: 5,
     isSpecial: true,
-    image: 'assets/image/Brassavola.jpg',
+    isNatural: true,
+    image: '/assets/image/Brassavola.jpg',
     color: 'White',
     origin: 'Mexico',
     category: 'Brassavola'
@@ -15,7 +16,8 @@ export const ListOfOrchids = [
     name: 'Brassia',
     rating: 4,
     isSpecial: false,
-    image: 'assets/image/Brassia.jpg',
+    isNatural: true,
+    image: '/assets/image/Brassia.jpg',
     color: 'Yellow-Green',
     origin: 'Central America',
     category: 'Brassia'
@@ -25,7 +27,8 @@ export const ListOfOrchids = [
     name: 'Cambria',
     rating: 5,
     isSpecial: true,
-    image: 'assets/image/Cambria.jpg',
+    isNatural: false, // Hybrid (lai)
+    image: '/assets/image/Cambria.jpg',
     color: 'Red-Pink',
     origin: 'Hybrid (Europe)',
     category: 'Cambria'
@@ -35,7 +38,8 @@ export const ListOfOrchids = [
     name: 'Cattleya',
     rating: 3,
     isSpecial: false,
-    image: 'assets/image/Cattleya.jpg',
+    isNatural: true,
+    image: '/assets/image/Cattleya.jpg',
     color: 'Purple',
     origin: 'South America',
     category: 'Cattleya'
@@ -45,7 +49,8 @@ export const ListOfOrchids = [
     name: 'Cymbidium',
     rating: 4,
     isSpecial: true,
-    image: 'assets/image/Cymbidium.jpg',
+    isNatural: true,
+    image: '/assets/image/Cymbidium.jpg',
     color: 'Green-Yellow',
     origin: 'Asia',
     category: 'Cymbidium'
@@ -55,7 +60,8 @@ export const ListOfOrchids = [
     name: 'Dendrobium',
     rating: 5,
     isSpecial: true,
-    image: 'assets/image/Dendrobium.jpg',
+    isNatural: true,
+    image: '/assets/image/Dendrobium.jpg',
     color: 'Purple-White',
     origin: 'India & SE Asia',
     category: 'Dendrobium'
@@ -65,7 +71,8 @@ export const ListOfOrchids = [
     name: 'Encyclia',
     rating: 3,
     isSpecial: false,
-    image: 'assets/image/Encyclia.jpg',
+    isNatural: true,
+    image: '/assets/image/Encyclia.jpg',
     color: 'Brown-Purple',
     origin: 'Caribbean',
     category: 'Encyclia'
@@ -75,7 +82,8 @@ export const ListOfOrchids = [
     name: 'Epidendrum',
     rating: 3,
     isSpecial: false,
-    image: 'assets/image/Epidendrum.jpg',
+    isNatural: true,
+    image: '/assets/image/Epidendrum.jpg',
     color: 'Orange',
     origin: 'South America',
     category: 'Epidendrum'
@@ -85,7 +93,8 @@ export const ListOfOrchids = [
     name: 'Habrumalas',
     rating: 4,
     isSpecial: true,
-    image: 'assets/image/Habrumalas.jpg',
+    isNatural: true,
+    image: '/assets/image/Habrumalas.jpg',
     color: 'White',
     origin: 'Japan',
     category: 'Habenaria'
@@ -95,7 +104,8 @@ export const ListOfOrchids = [
     name: 'Keikis',
     rating: 3,
     isSpecial: false,
-    image: 'assets/image/Keikis.jpg',
+    isNatural: false, // Keikis là chồi nhân giống, không tự nhiên
+    image: '/assets/image/Keikis.jpg',
     color: 'Varies',
     origin: 'Hybrid Growth',
     category: 'Phalaenopsis (Keiki)'
@@ -105,7 +115,8 @@ export const ListOfOrchids = [
     name: 'Miltonia',
     rating: 3,
     isSpecial: false,
-    image: 'assets/image/Miltonia.jpg',
+    isNatural: true,
+    image: '/assets/image/Miltonia.jpg',
     color: 'Pink-Purple',
     origin: 'Brazil',
     category: 'Miltonia'
@@ -115,7 +126,8 @@ export const ListOfOrchids = [
     name: 'Miltoniopsis',
     rating: 4,
     isSpecial: true,
-    image: 'assets/image/Miltoniopsis.jpg',
+    isNatural: true,
+    image: '/assets/image/Miltoniopsis.jpg',
     color: 'White-Purple',
     origin: 'Colombia',
     category: 'Miltoniopsis'
@@ -125,7 +137,8 @@ export const ListOfOrchids = [
     name: 'Oncidium',
     rating: 5,
     isSpecial: true,
-    image: 'assets/image/Oncidium.jpg',
+    isNatural: true,
+    image: '/assets/image/Oncidium.jpg',
     color: 'Yellow',
     origin: 'South America',
     category: 'Oncidium'
@@ -135,7 +148,8 @@ export const ListOfOrchids = [
     name: 'Paphiopedilum',
     rating: 5,
     isSpecial: true,
-    image: 'assets/image/Paphiopedilum.jpg',
+    isNatural: true,
+    image: '/assets/image/Paphiopedilum.jpg',
     color: 'Green-Purple',
     origin: 'Southeast Asia',
     category: 'Paphiopedilum'
@@ -145,7 +159,8 @@ export const ListOfOrchids = [
     name: 'Phalaenopsis',
     rating: 5,
     isSpecial: true,
-    image: 'assets/image/Phalaenopsis.jpg',
+    isNatural: true,
+    image: '/assets/image/Phalaenopsis.jpg',
     color: 'White-Pink',
     origin: 'Philippines',
     category: 'Phalaenopsis'
@@ -155,7 +170,8 @@ export const ListOfOrchids = [
     name: 'Angraecum',
     rating: 4,
     isSpecial: false,
-    image: 'assets/image/Angraecum.jpg',
+    isNatural: true,
+    image: '/assets/image/Angraecum.jpg',
     color: 'White',
     origin: 'Madagascar',
     category: 'Angraecum'

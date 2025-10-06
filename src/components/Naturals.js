@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { ListOfOrchids } from "../shared/ListOfOrchids";
 
-export default function OrchidsPresentation({ orchids }) {
+export default function Naturals() {
+  const naturalOrchids = ListOfOrchids.filter(o => o.isNatural);
+
   return (
     <div className="row">
-      {orchids.map((orchid) => (
+      {naturalOrchids.map((orchid) => (
         <div key={orchid.id} className="col-md-3 mb-4">
           <div className="card h-100 shadow-sm">
             <img
@@ -24,14 +26,6 @@ export default function OrchidsPresentation({ orchids }) {
               {orchid.isSpecial && (
                 <span className="badge bg-success">Special</span>
               )}
-              <div className="mt-3">
-                <Link 
-                  to={`/detail/${orchid.id}`} 
-                  className="btn btn-primary btn-sm"
-                >
-                  Detail
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -39,3 +33,4 @@ export default function OrchidsPresentation({ orchids }) {
     </div>
   );
 }
+// Lưu ý: Cần đảm bảo rằng trong ListOfOrchids có thuộc tính isNatural để lọc các loài lan tự nhiên

@@ -1,29 +1,36 @@
-import React, { useState } from "react";
-import "./App.css";
-import Navigation from "./components/Navigation";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Orchids from "./components/Orchids";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Orchids from './components/Orchids';
+import Detail from './components/Detail';
+import Naturals from './components/Naturals';
+import Contact from './components/Contact';
+import AuthProvider from './components/AuthProvider';
 
 function App() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
-
   return (
-    <div
-      className={`d-flex flex-column min-vh-100 ${
-        isDarkTheme ? "bg-dark text-light" : "bg-light text-dark"
-      }`}
-    >
-      <Navigation isDarkTheme={isDarkTheme} onToggleTheme={toggleTheme} />
-      <div >
-        <Main />
-      </div>
-      <Footer />
-    </div>
+    <AuthProvider>
+      <Router>
+        {/* ✅ Bootstrap layout để đẩy footer xuống cuối */}
+        <div className="d-flex flex-column min-vh-100">
+          <Navbar />
+          
+          {/* Nội dung chính */}
+          <div className="container my-4 flex-grow-1">
+            <Routes>
+              <Route path="/" element={<Orchids />} />
+              <Route path="/detail/:id" element={<Detail />} />
+              <Route path="/naturals" element={<Naturals />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+
+          {/* Footer */}
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
