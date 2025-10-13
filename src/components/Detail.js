@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import { ListOfOrchids } from "../shared/ListOfOrchids";
 
 export default function Detail() {
-  const { id } = useParams(); // lấy id từ URL
-  const orchid = ListOfOrchids.find((o) => o.id === id);
+
+  const { id } = useParams();
+  const orchid = ListOfOrchids.find(o => o.id === id);
+  console.log(orchid);
 
   if (!orchid) return <h2 className="text-center">Orchid not found</h2>;
-
   return (
     <div className="container my-4">
       <h2>{orchid.name}</h2>

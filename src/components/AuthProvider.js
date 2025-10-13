@@ -14,17 +14,22 @@ export default function AuthProvider({ children }) {
     }
   }, []);
 
+  // Đồng bộ localStorage mỗi khi user thay đổi
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('user');
+    }
+  }, [user]);
+
   const login = (username) => {
     const userData = { name: username };
     setUser(userData);
-    // Lưu vào localStorage
-    localStorage.setItem('user', JSON.stringify(userData));
   };
 
   const logout = () => {
     setUser(null);
-    // Xóa khỏi localStorage
-    localStorage.removeItem('user');
   };
 
   // Giá trị context được chia sẻ

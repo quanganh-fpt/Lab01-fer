@@ -49,7 +49,7 @@ export default function Navbar() {
             ) : (
               <button
                 className="btn btn-outline-light"
-                onClick={() => login("Guest")}
+                onClick={() => login("quang anh")}
               >
                 Login
               </button>
