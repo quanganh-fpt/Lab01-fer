@@ -1,5 +1,5 @@
 import React from "react";
-import { ListOfOrchids } from "../shared/ListOfOrchids";
+import { ListOfOrchids } from "../../shared/ListOfOrchids";
 
 export default function Naturals() {
   const naturalOrchids = ListOfOrchids.filter(o => o.isNatural);
